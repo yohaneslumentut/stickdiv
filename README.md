@@ -1,2 +1,2 @@
 # stickdiv
-JQuery plugin for sticky div
+Simple JQuery plugin(example) for sticky div
