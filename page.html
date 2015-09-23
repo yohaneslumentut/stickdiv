@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Stick Div Example</title>
+
+        <!-- Bootstrap -->
+        <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body {
+                background-color:#eee;
+            }
+
+            .content {
+                width: 80% ;
+                margin-top:56px;
+                margin-left: auto ;
+                margin-right: auto ;
+            }
+            .side-menu{
+
+            }
+            .page-content{
+
+            }
+            .col-md-3, .col-md-9{
+                position: relative;
+                padding:5px;
+                bottom:0;
+            }
+            .active {
+                position:fixed;
+                width:inherit;
+            }
+            .panel-body.contents{
+                height:900px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+    <!-- Fixed navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Sticky Div Example</a>
+                </div>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="side-menu">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                Sticky Div
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="page-content">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Panel heading</div>
+                            <div class="panel-body contents">
+                                Panel content
+                            </div>
+                            <div class="panel-footer">Panel footer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="stickdiv.js"></script>
+
+        <script>
+            $( document ).ready(function() {
+                console.log( "ready!" );
+                $('.side-menu').stickyDiv();
+            });
+        </script>
+    </body>
+</html>
